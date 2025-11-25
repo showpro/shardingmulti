@@ -2596,3 +2596,327 @@ sql.show: 'true'
 2020-08-17 16:02:53.630 [SpringContextShutdownHook] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
 2020-08-17 16:02:53.630 [SpringContextShutdownHook] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closing ... 
 2020-08-17 16:02:53.638 [SpringContextShutdownHook] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closed 
+2025-11-25 19:35:11.824 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 2996 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 19:35:11.829 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 19:35:13.065 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 19:35:13.074 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 19:35:13.075 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 19:35:13.075 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 19:35:13.160 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 19:35:13.160 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1089 ms 
+2025-11-25 19:35:13.983 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 19:35:14.410 [Druid-ConnectionPool-Create-1761048302] [:] INFO  com.alibaba.druid.pool.DruidAbstractDataSource - {dataSource-1} failContinuous is true 
+2025-11-25 19:37:59.538 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 14024 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 19:37:59.543 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 19:38:00.557 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 19:38:00.565 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 19:38:00.565 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 19:38:00.565 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 19:38:00.646 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 19:38:00.646 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 910 ms 
+2025-11-25 19:38:01.330 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 19:38:01.674 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited 
+2025-11-25 19:38:01.782 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - ShardingRuleConfiguration:
+tables:
+  t_order:
+    actualDataNodes: saleorder01.t_order_$->{1..2},saleorder02.t_order_$->{3..4}
+    databaseStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.DatabasePreciseShardingAlgorithm
+        shardingColumn: orderId
+    logicTable: t_order
+    tableStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.OrderTablePreciseShardingAlgorithm
+        shardingColumn: orderId
+ 
+2025-11-25 19:38:01.782 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - Properties:
+sql.show: 'true'
+ 
+2025-11-25 19:38:01.793 [main] [:] INFO  ShardingSphere-metadata - Loading 1 logic tables' meta data. 
+2025-11-25 19:38:01.945 [main] [:] INFO  ShardingSphere-metadata - Meta data load finished, cost 163 milliseconds. 
+2025-11-25 19:38:02.081 [main] [:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2025-11-25 19:38:02.324 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2025-11-25 19:38:02.347 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '' 
+2025-11-25 19:38:02.354 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Started DemoApplication in 3.174 seconds (JVM running for 4.673) 
+2025-11-25 19:39:28.391 [http-nio-8080-exec-1] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-11-25 19:39:28.391 [http-nio-8080-exec-1] [FrameworkServlet.java:525] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2025-11-25 19:39:28.403 [http-nio-8080-exec-1] [FrameworkServlet.java:547] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms 
+2025-11-25 19:39:28.602 [http-nio-8080-exec-1] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited 
+2025-11-25 19:42:09.744 [http-nio-8080-exec-10] [:] INFO  ShardingSphere-SQL - Logic SQL: SELECT count(0) FROM t_order 
+2025-11-25 19:42:09.744 [http-nio-8080-exec-10] [:] INFO  ShardingSphere-SQL - SQLStatement: SelectStatementContext(super=CommonSQLStatementContext(sqlStatement=org.apache.shardingsphere.sql.parser.sql.statement.dml.SelectStatement@347dd6ae, tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@19e93476), tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@19e93476, projectionsContext=ProjectionsContext(startIndex=7, stopIndex=14, distinctRow=false, projections=[AggregationProjection(type=COUNT, innerExpression=(0), alias=Optional.empty, derivedAggregationProjections=[], index=-1)]), groupByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.groupby.GroupByContext@20bfa517, orderByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.orderby.OrderByContext@6f7f5b2f, paginationContext=org.apache.shardingsphere.sql.parser.binder.segment.select.pagination.PaginationContext@35ed38c8, containsSubquery=false) 
+2025-11-25 19:42:09.744 [http-nio-8080-exec-10] [:] INFO  ShardingSphere-SQL - Actual SQL: saleorder01 ::: SELECT count(0) FROM t_order_1 
+2025-11-25 19:42:09.744 [http-nio-8080-exec-10] [:] INFO  ShardingSphere-SQL - Actual SQL: saleorder01 ::: SELECT count(0) FROM t_order_2 
+2025-11-25 19:42:09.745 [http-nio-8080-exec-10] [:] INFO  ShardingSphere-SQL - Actual SQL: saleorder02 ::: SELECT count(0) FROM t_order_3 
+2025-11-25 19:42:09.745 [http-nio-8080-exec-10] [:] INFO  ShardingSphere-SQL - Actual SQL: saleorder02 ::: SELECT count(0) FROM t_order_4 
+2025-11-25 19:56:03.761 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 15668 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 19:56:03.765 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 19:56:04.812 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 19:56:04.820 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 19:56:04.820 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 19:56:04.820 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 19:56:04.905 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 19:56:04.905 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 968 ms 
+2025-11-25 19:56:05.606 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 19:56:06.062 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited 
+2025-11-25 19:56:06.149 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - ShardingRuleConfiguration:
+defaultDataSourceName: orderdb
+tables:
+  t_order:
+    actualDataNodes: db1.t_order_$->{1..2},db2.t_order_$->{3..4}
+    databaseStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.DatabasePreciseShardingAlgorithm
+        shardingColumn: orderId
+    logicTable: t_order
+    tableStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.OrderTablePreciseShardingAlgorithm
+        shardingColumn: orderId
+ 
+2025-11-25 19:56:06.150 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - Properties:
+sql.show: 'true'
+ 
+2025-11-25 19:56:06.160 [main] [:] INFO  ShardingSphere-metadata - Loading 1 logic tables' meta data. 
+2025-11-25 19:56:06.310 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closing ... 
+2025-11-25 19:56:06.314 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed 
+2025-11-25 19:56:06.314 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2025-11-25 19:56:06.315 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2025-11-25 19:56:06.315 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ... 
+2025-11-25 19:56:06.319 [main] [:] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat] 
+2025-11-25 19:56:06.330 [main] [:] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2025-11-25 19:56:42.023 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 7912 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 19:56:42.026 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 19:56:43.014 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 19:56:43.022 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 19:56:43.023 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 19:56:43.023 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 19:56:43.111 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 19:56:43.111 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 911 ms 
+2025-11-25 19:56:43.766 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 19:56:44.130 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited 
+2025-11-25 19:56:44.210 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - ShardingRuleConfiguration:
+defaultDataSourceName: orderdb
+tables:
+  t_order:
+    actualDataNodes: db1.t_order_$->{1..2},db2.t_order_$->{3..4}
+    databaseStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.DatabasePreciseShardingAlgorithm
+        shardingColumn: orderId
+    logicTable: t_order
+    tableStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.OrderTablePreciseShardingAlgorithm
+        shardingColumn: orderId
+ 
+2025-11-25 19:56:44.211 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - Properties:
+sql.show: 'true'
+ 
+2025-11-25 19:56:44.220 [main] [:] INFO  ShardingSphere-metadata - Loading 1 logic tables' meta data. 
+2025-11-25 19:56:44.343 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closing ... 
+2025-11-25 19:56:44.347 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed 
+2025-11-25 19:56:44.347 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2025-11-25 19:56:44.348 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2025-11-25 19:56:44.348 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ... 
+2025-11-25 19:56:44.350 [main] [:] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat] 
+2025-11-25 19:56:44.362 [main] [:] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2025-11-25 19:59:22.475 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 7696 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 19:59:22.491 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 19:59:24.364 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 19:59:24.377 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 19:59:24.377 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 19:59:24.377 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 19:59:24.513 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 19:59:24.513 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1630 ms 
+2025-11-25 19:59:25.741 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 19:59:27.149 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited 
+2025-11-25 19:59:27.321 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - ShardingRuleConfiguration:
+defaultDataSourceName: orderdb
+tables:
+  t_order:
+    actualDataNodes: db1.t_order_$->{1..2},db2.t_order_$->{3..4}
+    databaseStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.DatabasePreciseShardingAlgorithm
+        shardingColumn: orderId
+    logicTable: t_order
+    tableStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.OrderTablePreciseShardingAlgorithm
+        shardingColumn: orderId
+ 
+2025-11-25 19:59:27.323 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - Properties:
+sql.show: 'true'
+ 
+2025-11-25 19:59:27.362 [main] [:] INFO  ShardingSphere-metadata - Loading 1 logic tables' meta data. 
+2025-11-25 19:59:27.722 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closing ... 
+2025-11-25 19:59:27.728 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed 
+2025-11-25 19:59:27.728 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2025-11-25 19:59:27.729 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2025-11-25 19:59:27.729 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ... 
+2025-11-25 19:59:27.733 [main] [:] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat] 
+2025-11-25 19:59:27.743 [main] [:] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2025-11-25 20:02:39.530 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 17132 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 20:02:39.626 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 20:02:41.105 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 20:02:41.117 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 20:02:41.117 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 20:02:41.117 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 20:02:41.242 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 20:02:41.242 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1318 ms 
+2025-11-25 20:02:42.425 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 20:02:43.749 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited 
+2025-11-25 20:02:43.918 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - ShardingRuleConfiguration:
+defaultDataSourceName: orderdb
+tables:
+  t_order:
+    actualDataNodes: db1.t_order_$->{1..2},db2.t_order_$->{3..4}
+    databaseStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.DatabasePreciseShardingAlgorithm
+        shardingColumn: orderId
+    logicTable: t_order
+    tableStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.OrderTablePreciseShardingAlgorithm
+        shardingColumn: orderId
+ 
+2025-11-25 20:02:43.921 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - Properties:
+sql.show: 'true'
+ 
+2025-11-25 20:02:43.961 [main] [:] INFO  ShardingSphere-metadata - Loading 1 logic tables' meta data. 
+2025-11-25 20:02:44.320 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closing ... 
+2025-11-25 20:02:44.345 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed 
+2025-11-25 20:02:44.345 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2025-11-25 20:02:44.346 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2025-11-25 20:02:44.347 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ... 
+2025-11-25 20:02:44.351 [main] [:] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat] 
+2025-11-25 20:02:44.361 [main] [:] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2025-11-25 20:03:54.718 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 7436 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 20:03:54.809 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 20:03:56.127 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 20:03:56.139 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 20:03:56.140 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 20:03:56.140 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 20:03:56.272 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 20:03:56.272 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1220 ms 
+2025-11-25 20:03:57.479 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 20:03:58.781 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited 
+2025-11-25 20:03:58.944 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - ShardingRuleConfiguration:
+tables:
+  t_order:
+    actualDataNodes: db1.t_order_$->{1..2},db2.t_order_$->{3..4}
+    databaseStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.DatabasePreciseShardingAlgorithm
+        shardingColumn: orderId
+    logicTable: t_order
+    tableStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.OrderTablePreciseShardingAlgorithm
+        shardingColumn: orderId
+ 
+2025-11-25 20:03:58.946 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - Properties:
+sql.show: 'true'
+ 
+2025-11-25 20:03:58.990 [main] [:] INFO  ShardingSphere-metadata - Loading 1 logic tables' meta data. 
+2025-11-25 20:03:59.347 [main] [:] INFO  ShardingSphere-metadata - Meta data load finished, cost 401 milliseconds. 
+2025-11-25 20:03:59.604 [main] [:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2025-11-25 20:04:00.004 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2025-11-25 20:04:00.053 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '' 
+2025-11-25 20:04:00.065 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Started DemoApplication in 5.721 seconds (JVM running for 7.666) 
+2025-11-25 20:04:23.460 [http-nio-8080-exec-2] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-11-25 20:04:23.460 [http-nio-8080-exec-2] [FrameworkServlet.java:525] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2025-11-25 20:04:23.480 [http-nio-8080-exec-2] [FrameworkServlet.java:547] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 20 ms 
+2025-11-25 20:04:24.966 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Logic SQL: SELECT count(0) FROM t_order 
+2025-11-25 20:04:24.966 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - SQLStatement: SelectStatementContext(super=CommonSQLStatementContext(sqlStatement=org.apache.shardingsphere.sql.parser.sql.statement.dml.SelectStatement@654d4e63, tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@304d2d7), tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@304d2d7, projectionsContext=ProjectionsContext(startIndex=7, stopIndex=14, distinctRow=false, projections=[AggregationProjection(type=COUNT, innerExpression=(0), alias=Optional.empty, derivedAggregationProjections=[], index=-1)]), groupByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.groupby.GroupByContext@61868255, orderByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.orderby.OrderByContext@7bc293de, paginationContext=org.apache.shardingsphere.sql.parser.binder.segment.select.pagination.PaginationContext@74f3f493, containsSubquery=false) 
+2025-11-25 20:04:24.967 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Actual SQL: db1 ::: SELECT count(0) FROM t_order_1 
+2025-11-25 20:04:24.967 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Actual SQL: db1 ::: SELECT count(0) FROM t_order_2 
+2025-11-25 20:04:24.967 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Actual SQL: db2 ::: SELECT count(0) FROM t_order_3 
+2025-11-25 20:04:24.967 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Actual SQL: db2 ::: SELECT count(0) FROM t_order_4 
+2025-11-25 20:16:24.930 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 9404 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 20:16:24.938 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 20:16:26.253 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 20:16:26.265 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 20:16:26.266 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 20:16:26.266 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 20:16:26.392 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 20:16:26.392 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1235 ms 
+2025-11-25 20:16:27.609 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 20:16:28.947 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited 
+2025-11-25 20:16:29.112 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - ShardingRuleConfiguration:
+defaultDataSourceName: orderdb
+tables:
+  t_order:
+    actualDataNodes: db1.t_order_$->{1..2},db2.t_order_$->{3..4}
+    databaseStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.DatabasePreciseShardingAlgorithm
+        shardingColumn: orderId
+    logicTable: t_order
+    tableStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.OrderTablePreciseShardingAlgorithm
+        shardingColumn: orderId
+ 
+2025-11-25 20:16:29.114 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - Properties:
+sql.show: 'true'
+ 
+2025-11-25 20:16:29.153 [main] [:] INFO  ShardingSphere-metadata - Loading 1 logic tables' meta data. 
+2025-11-25 20:16:29.511 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closing ... 
+2025-11-25 20:16:29.516 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed 
+2025-11-25 20:16:29.516 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2025-11-25 20:16:29.517 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2025-11-25 20:16:29.517 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ... 
+2025-11-25 20:16:29.521 [main] [:] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat] 
+2025-11-25 20:16:29.531 [main] [:] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2025-11-25 20:19:40.018 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 2384 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 20:19:40.131 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 20:19:41.453 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 20:19:41.465 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 20:19:41.465 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 20:19:41.465 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 20:19:41.597 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 20:19:41.597 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1218 ms 
+2025-11-25 20:19:42.805 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 20:19:44.098 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited 
+2025-11-25 20:19:44.264 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - ShardingRuleConfiguration:
+defaultDataSourceName: orderdb
+tables:
+  t_order:
+    actualDataNodes: db1.t_order_$->{1..2},db2.t_order_$->{3..4}
+    databaseStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.DatabasePreciseShardingAlgorithm
+        shardingColumn: orderId
+    logicTable: t_order
+    tableStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.OrderTablePreciseShardingAlgorithm
+        shardingColumn: orderId
+ 
+2025-11-25 20:19:44.266 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - Properties:
+sql.show: 'true'
+ 
+2025-11-25 20:19:44.307 [main] [:] INFO  ShardingSphere-metadata - Loading 1 logic tables' meta data. 
+2025-11-25 20:19:44.665 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ... 
+2025-11-25 20:19:44.665 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closing ... 
+2025-11-25 20:19:44.670 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed 
+2025-11-25 20:19:44.670 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2025-11-25 20:19:44.671 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2025-11-25 20:19:44.671 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ... 
+2025-11-25 20:19:44.675 [main] [:] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat] 
+2025-11-25 20:19:44.685 [main] [:] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 

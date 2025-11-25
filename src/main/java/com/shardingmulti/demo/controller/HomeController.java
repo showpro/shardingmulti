@@ -4,11 +4,13 @@ import com.baomidou.dynamic.datasource.annotation.DS;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.shardingmulti.demo.mapper.goodsdb.GoodsMapper;
+import com.shardingmulti.demo.mapper.sharding.OrderMapper;
 import com.shardingmulti.demo.mapper.sharding.OrderShardingMapper;
 import com.shardingmulti.demo.pojo.Goods;
 
 import javax.annotation.Resource;
 
+import com.shardingmulti.demo.pojo.Order;
 import com.shardingmulti.demo.pojo.OrderSharding;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +21,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+/**
+ * 项目功能说明：
+ *
+ *     演示shardingsphere集成了两个分表的库，1个默认库,
+ *
+ *     非shardingsphere数据源集成了第4个数据库
+ */
 @Controller
 @RequestMapping("/home")
 public class HomeController {
@@ -28,6 +37,8 @@ public class HomeController {
 
     @Resource
     private OrderShardingMapper orderShardingMapper;
+    @Resource
+    private OrderMapper orderMapper;
 
     //商品详情 参数:商品id
     @GetMapping("/goodsinfo")
@@ -36,6 +47,14 @@ public class HomeController {
     public Goods goodsInfo(@RequestParam(value="goodsid",required = true,defaultValue = "0") Long goodsId) {
         Goods goods = goodsMapper.selectOneGoods(goodsId);
         return goods;
+    }
+
+    //订单统计库，参数：订单id
+    @GetMapping("/orderinfo")
+    @ResponseBody
+    public Order orderInfo(@RequestParam(value="orderid",required = true,defaultValue = "0") Long orderId) {
+        Order order = orderMapper.selectOneOrder(orderId);
+        return order;
     }
 
     @GetMapping("/orderlist")
