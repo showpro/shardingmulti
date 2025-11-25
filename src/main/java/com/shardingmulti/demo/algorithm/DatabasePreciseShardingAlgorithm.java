@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 
+/**
+ * 数据库分库算法
+ */
 @Component
 public class DatabasePreciseShardingAlgorithm implements PreciseShardingAlgorithm<Long> {
     @Override

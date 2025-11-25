@@ -22,11 +22,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 /**
- * 项目功能说明：
+ * 实现到各个数据源的访问
  *
- *     演示shardingsphere集成了两个分表的库，1个默认库,
- *
- *     非shardingsphere数据源集成了第4个数据库
+ * https://www.cnblogs.com/architectforest/p/13537436.html
  */
 @Controller
 @RequestMapping("/home")
@@ -40,6 +38,13 @@ public class HomeController {
     @Resource
     private OrderMapper orderMapper;
 
+    /**
+     * 访问goodsdb
+     * http://127.0.0.1:8080/home/goodsinfo?goodsid=1
+     *
+     * @param goodsId
+     * @return
+     */
     //商品详情 参数:商品id
     @GetMapping("/goodsinfo")
     @ResponseBody
@@ -49,6 +54,13 @@ public class HomeController {
         return goods;
     }
 
+    /**
+     * 访问orderdb
+     * http://127.0.0.1:8080/home/orderinfo?orderid=1
+     *
+     * @param orderId
+     * @return
+     */
     //订单统计库，参数：订单id
     @GetMapping("/orderinfo")
     @ResponseBody
@@ -57,6 +69,13 @@ public class HomeController {
         return order;
     }
 
+    /**
+     * 访问分表库:
+     * http://127.0.0.1:8080/home/orderlist
+     *
+     * @return
+     */
+    //两个分表库中的订单列表
     @GetMapping("/orderlist")
     public String list(Model model, @RequestParam(value="currentPage",required = false,defaultValue = "1") Integer currentPage){
 
@@ -75,5 +94,11 @@ public class HomeController {
         System.out.println("------------------------size:"+orderList.size());
         return "order/list";
     }
+
+    /**
+     * 从druid的监控页面查看创建的连接:
+     * http://127.0.0.1:8080/druid
+     * 可以看到连接有共4个数据源：
+     */
 }
 

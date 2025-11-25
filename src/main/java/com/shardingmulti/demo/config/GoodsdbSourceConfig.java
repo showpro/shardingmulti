@@ -14,7 +14,18 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
-
+/**
+ * 配置goodsdb数据源，
+ *
+ * 注意因为要使用mybatis,所以指明了mapper文件所在的包，和xml文件所在的路径
+ *
+ * 因为这个数据源不是由shardingjdbc所管理，所以要注意两个数据源的mapper程序和xml文件要隔离开
+ *
+ * 分别放在 mapper/goodsdb   和 mapper/sharding
+ *
+ * @author zhanzhan
+ * @date 2025/11/25 20:06
+ */
 @Configuration
 @MapperScan(basePackages = "com.shardingmulti.demo.mapper.goodsdb", sqlSessionTemplateRef = "goodsdbSqlSessionTemplate")
 public class GoodsdbSourceConfig {

@@ -28,6 +28,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * shardingjdbc的数据源，创建时要使用ShardingDataSourceFactory
+ *
+ * 它负责连接3个库：两个分表库:saleorder01,saleorder02, 一个非分表库:orderdb
+ *
+ * 注意shardingjdbc所管理的数据源中，只能有一个非分表的库，而且要设置为默认库，
+ *
+ * 否则不能正常访问
+ *
+ * @author zhanzhan
+ * @date 2025/11/25 20:06
+ */
 @Configuration
 @MapperScan(basePackages = "com.shardingmulti.demo.mapper.sharding", sqlSessionFactoryRef = "shardingSqlSessionFactory")
 public class ShardingDataSourceConfig {

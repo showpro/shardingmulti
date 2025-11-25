@@ -6,6 +6,11 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 
+/**
+ * 数据库分表算法
+ * @author zhanzhan
+ * @date 2025/11/25 20:06
+ */
 @Component
 public class OrderTablePreciseShardingAlgorithm implements PreciseShardingAlgorithm<Long> {
     @Override

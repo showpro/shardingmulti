@@ -2920,3 +2920,63 @@ sql.show: 'true'
 2025-11-25 20:19:44.685 [main] [:] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2025-11-25 20:20:47.521 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Starting DemoApplication on Zane with PID 6556 (D:\code\javacode\source\shardingmulti\target\classes started by Mr.Zhan in D:\code\javacode\source\shardingmulti) 
+2025-11-25 20:20:47.613 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - No active profile set, falling back to default profiles: default 
+2025-11-25 20:20:48.924 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http) 
+2025-11-25 20:20:48.937 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2025-11-25 20:20:48.937 [main] [:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2025-11-25 20:20:48.937 [main] [:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2025-11-25 20:20:49.057 [main] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2025-11-25 20:20:49.057 [main] [:] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1202 ms 
+2025-11-25 20:20:50.273 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2025-11-25 20:20:51.568 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited 
+2025-11-25 20:20:51.597 [main] [:] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited 
+2025-11-25 20:20:51.772 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - ShardingRuleConfiguration:
+defaultDataSourceName: orderdb
+tables:
+  t_order:
+    actualDataNodes: db1.t_order_$->{1..2},db2.t_order_$->{3..4}
+    databaseStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.DatabasePreciseShardingAlgorithm
+        shardingColumn: orderId
+    logicTable: t_order
+    tableStrategy:
+      standard:
+        preciseAlgorithmClassName: com.shardingmulti.demo.algorithm.OrderTablePreciseShardingAlgorithm
+        shardingColumn: orderId
+ 
+2025-11-25 20:20:51.774 [main] [:] INFO  org.apache.shardingsphere.core.log.ConfigurationLogger - Properties:
+sql.show: 'true'
+ 
+2025-11-25 20:20:51.816 [main] [:] INFO  ShardingSphere-metadata - Loading 1 logic tables' meta data. 
+2025-11-25 20:20:52.188 [main] [:] INFO  ShardingSphere-metadata - Loading 1 tables' meta data. 
+2025-11-25 20:20:52.204 [main] [:] INFO  ShardingSphere-metadata - Meta data load finished, cost 429 milliseconds. 
+2025-11-25 20:20:52.455 [main] [:] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2025-11-25 20:20:52.857 [main] [:] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2025-11-25 20:20:52.905 [main] [:] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '' 
+2025-11-25 20:20:52.918 [main] [:] INFO  com.shardingmulti.demo.DemoApplication - Started DemoApplication in 5.789 seconds (JVM running for 7.839) 
+2025-11-25 20:21:17.326 [http-nio-8080-exec-3] [:] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-11-25 20:21:17.326 [http-nio-8080-exec-3] [FrameworkServlet.java:525] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2025-11-25 20:21:17.340 [http-nio-8080-exec-3] [FrameworkServlet.java:547] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms 
+2025-11-25 20:21:18.338 [http-nio-8080-exec-3] [:] INFO  ShardingSphere-SQL - Logic SQL: select * from orderinfo where orderId=? 
+2025-11-25 20:21:18.338 [http-nio-8080-exec-3] [:] INFO  ShardingSphere-SQL - SQLStatement: SelectStatementContext(super=CommonSQLStatementContext(sqlStatement=org.apache.shardingsphere.sql.parser.sql.statement.dml.SelectStatement@4b9e606d, tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@59954d82), tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@59954d82, projectionsContext=ProjectionsContext(startIndex=7, stopIndex=7, distinctRow=false, projections=[ShorthandProjection(owner=Optional.empty, actualColumns=[ColumnProjection(owner=null, name=orderid, alias=Optional.empty), ColumnProjection(owner=null, name=ordersn, alias=Optional.empty), ColumnProjection(owner=null, name=ordertime, alias=Optional.empty), ColumnProjection(owner=null, name=orderstatus, alias=Optional.empty), ColumnProjection(owner=null, name=userid, alias=Optional.empty), ColumnProjection(owner=null, name=price, alias=Optional.empty), ColumnProjection(owner=null, name=addressid, alias=Optional.empty)])]), groupByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.groupby.GroupByContext@20a0fb5c, orderByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.orderby.OrderByContext@6ded5f06, paginationContext=org.apache.shardingsphere.sql.parser.binder.segment.select.pagination.PaginationContext@5548d7de, containsSubquery=false) 
+2025-11-25 20:21:18.339 [http-nio-8080-exec-3] [:] INFO  ShardingSphere-SQL - Actual SQL: orderdb ::: select * from orderinfo where orderId=? ::: [1] 
+2025-11-25 20:21:30.857 [http-nio-8080-exec-1] [:] INFO  ShardingSphere-SQL - Logic SQL: SELECT count(0) FROM t_order 
+2025-11-25 20:21:30.857 [http-nio-8080-exec-1] [:] INFO  ShardingSphere-SQL - SQLStatement: SelectStatementContext(super=CommonSQLStatementContext(sqlStatement=org.apache.shardingsphere.sql.parser.sql.statement.dml.SelectStatement@54554d81, tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@b9474e), tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@b9474e, projectionsContext=ProjectionsContext(startIndex=7, stopIndex=14, distinctRow=false, projections=[AggregationProjection(type=COUNT, innerExpression=(0), alias=Optional.empty, derivedAggregationProjections=[], index=-1)]), groupByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.groupby.GroupByContext@75fb258, orderByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.orderby.OrderByContext@76f57df6, paginationContext=org.apache.shardingsphere.sql.parser.binder.segment.select.pagination.PaginationContext@8b20fec, containsSubquery=false) 
+2025-11-25 20:21:30.857 [http-nio-8080-exec-1] [:] INFO  ShardingSphere-SQL - Actual SQL: db1 ::: SELECT count(0) FROM t_order_1 
+2025-11-25 20:21:30.857 [http-nio-8080-exec-1] [:] INFO  ShardingSphere-SQL - Actual SQL: db1 ::: SELECT count(0) FROM t_order_2 
+2025-11-25 20:21:30.857 [http-nio-8080-exec-1] [:] INFO  ShardingSphere-SQL - Actual SQL: db2 ::: SELECT count(0) FROM t_order_3 
+2025-11-25 20:21:30.857 [http-nio-8080-exec-1] [:] INFO  ShardingSphere-SQL - Actual SQL: db2 ::: SELECT count(0) FROM t_order_4 
+2025-11-25 20:22:06.047 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Logic SQL: SELECT count(0) FROM t_order 
+2025-11-25 20:22:06.047 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - SQLStatement: SelectStatementContext(super=CommonSQLStatementContext(sqlStatement=org.apache.shardingsphere.sql.parser.sql.statement.dml.SelectStatement@54554d81, tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@34ce22c5), tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@34ce22c5, projectionsContext=ProjectionsContext(startIndex=7, stopIndex=14, distinctRow=false, projections=[AggregationProjection(type=COUNT, innerExpression=(0), alias=Optional.empty, derivedAggregationProjections=[], index=-1)]), groupByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.groupby.GroupByContext@71ccaa38, orderByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.orderby.OrderByContext@7dbb3e55, paginationContext=org.apache.shardingsphere.sql.parser.binder.segment.select.pagination.PaginationContext@40f77859, containsSubquery=false) 
+2025-11-25 20:22:06.047 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Actual SQL: db1 ::: SELECT count(0) FROM t_order_1 
+2025-11-25 20:22:06.047 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Actual SQL: db1 ::: SELECT count(0) FROM t_order_2 
+2025-11-25 20:22:06.047 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Actual SQL: db2 ::: SELECT count(0) FROM t_order_3 
+2025-11-25 20:22:06.047 [http-nio-8080-exec-2] [:] INFO  ShardingSphere-SQL - Actual SQL: db2 ::: SELECT count(0) FROM t_order_4 
+2025-11-25 20:22:24.963 [http-nio-8080-exec-5] [:] INFO  ShardingSphere-SQL - Logic SQL: SELECT count(0) FROM t_order 
+2025-11-25 20:22:24.964 [http-nio-8080-exec-5] [:] INFO  ShardingSphere-SQL - SQLStatement: SelectStatementContext(super=CommonSQLStatementContext(sqlStatement=org.apache.shardingsphere.sql.parser.sql.statement.dml.SelectStatement@54554d81, tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@1fd97e20), tablesContext=org.apache.shardingsphere.sql.parser.binder.segment.table.TablesContext@1fd97e20, projectionsContext=ProjectionsContext(startIndex=7, stopIndex=14, distinctRow=false, projections=[AggregationProjection(type=COUNT, innerExpression=(0), alias=Optional.empty, derivedAggregationProjections=[], index=-1)]), groupByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.groupby.GroupByContext@5adbe3bf, orderByContext=org.apache.shardingsphere.sql.parser.binder.segment.select.orderby.OrderByContext@474de621, paginationContext=org.apache.shardingsphere.sql.parser.binder.segment.select.pagination.PaginationContext@6b4b9d85, containsSubquery=false) 
+2025-11-25 20:22:24.964 [http-nio-8080-exec-5] [:] INFO  ShardingSphere-SQL - Actual SQL: db1 ::: SELECT count(0) FROM t_order_1 
+2025-11-25 20:22:24.964 [http-nio-8080-exec-5] [:] INFO  ShardingSphere-SQL - Actual SQL: db1 ::: SELECT count(0) FROM t_order_2 
+2025-11-25 20:22:24.964 [http-nio-8080-exec-5] [:] INFO  ShardingSphere-SQL - Actual SQL: db2 ::: SELECT count(0) FROM t_order_3 
+2025-11-25 20:22:24.964 [http-nio-8080-exec-5] [:] INFO  ShardingSphere-SQL - Actual SQL: db2 ::: SELECT count(0) FROM t_order_4 
